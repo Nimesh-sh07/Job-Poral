@@ -74,6 +74,7 @@ Job-Poral/
 This makes the portal smarter than a traditional job board.
 
 ---
+
 ## 🔐 Environment Variables
 
 To run this project locally, you must create your **own `.env` file** inside the `backend/` folder.
