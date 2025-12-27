@@ -29,11 +29,7 @@ To get a local copy up and running follow these simple steps.
 
 ### Installation
 
-1. Clone the repo:
-   ```sh
-   git clone https://github.com/exclusiveabhi/react-job-portal.git
-   ```
-2. Install NPM packages:
+1. Install NPM packages:
 
    ```sh
    cd react-job-portal
@@ -76,20 +72,6 @@ To get a local copy up and running follow these simple steps.
    ```
 7. Open your browser and navigate to `http://localhost:5173` to view the app.
 
-## Contributing
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request (`we will merge within 24 hour`)
 
-## Please give a star ⭐ to the repository if you like it.
-
-## Contact
-
-Abhishek Rajput - [GitHub](https://github.com/exclusiveabhi)
-
-Project Link: [https://github.com/exclusiveabhi/react-job-portal.git](https://github.com/exclusiveabhi/react-job-portal.git)
