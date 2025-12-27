@@ -1,0 +1,89 @@
+.saved-jobs {
+  padding: 4rem 2rem;
+  background-color: #0f172a; /* Dark blue-gray */
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+.saved-jobs .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.saved-jobs h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #38bdf8; /* Sky Blue */
+}
+
+.saved-jobs .banner {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.saved-jobs .card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.saved-jobs .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+}
+
+.saved-jobs .card h3 {
+  font-size: 1.4rem;
+  color: #facc15; /* Amber */
+  margin-bottom: 0.5rem;
+}
+
+.saved-jobs .card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.saved-jobs .card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0ea5e9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.saved-jobs .card a:hover {
+  background-color: #0284c7;
+}
+
+.saved-jobs .card button {
+  display: block;
+  margin-top: 1rem;
+  background-color: #dc2626;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.saved-jobs .card button:hover {
+  background-color: #b91c1c;
+}
+
+.saved-jobs p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}

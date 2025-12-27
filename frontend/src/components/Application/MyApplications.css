@@ -1,0 +1,99 @@
+.my_applications {
+  padding: 4rem 2rem;
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: #f8fafc;
+}
+
+.my_applications h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #38bdf8;
+  text-align: center;
+}
+
+.application-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.job_seeker_card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+  word-wrap: break-word;
+}
+
+.job_seeker_card:hover {
+  transform: translateY(-4px);
+}
+
+.detail p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.detail span {
+  font-weight: bold;
+  color: #facc15;
+}
+
+.resume img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.resume img:hover {
+  transform: scale(1.05);
+}
+
+.btn_area {
+  margin-top: 1rem;
+}
+
+.btn_area button {
+  background-color: #dc2626;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn_area button:hover {
+  background-color: #b91c1c;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #f8fafc;
+}
+
+select {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #f8fafc;
+}
+
+select:focus {
+  outline: none;
+  border-color: #38bdf8;
+}

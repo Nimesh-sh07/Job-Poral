@@ -1,0 +1,137 @@
+.resume-uploader-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #1e293b;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #f1f5f9;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+body,
+html {
+  background-color: #0f172a;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #38bdf8;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgba(56, 189, 248, 0.3);
+}
+
+.status-text {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 18px;
+  color: #facc15;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.matches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.job-card {
+  background-color: #0f172a;
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid #334155;
+  overflow-wrap: anywhere;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 8px #38bdf8;
+  border-color: #38bdf8;
+}
+
+.job-card h4 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #38bdf8;
+  text-shadow: 1px 1px 2px rgba(56, 189, 248, 0.2);
+}
+
+.job-card p {
+  font-size: 15px;
+  color: #cbd5e1;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.job-card small {
+  font-size: 13px;
+  color: #facc15;
+}
+
+/* Filter Section Enhancements */
+.filters input,
+.filters select {
+  border: none;
+  border-radius: 6px;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border: 1px solid #334155;
+  transition: border-color 0.3s ease;
+}
+
+.filters input:focus,
+.filters select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px #38bdf8aa;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar Styling (Optional) */
+.matches::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+.matches::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .resume-uploader-container {
+    padding: 16px;
+  }
+
+  .job-card {
+    padding: 16px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .status-text {
+    font-size: 16px;
+  }
+}

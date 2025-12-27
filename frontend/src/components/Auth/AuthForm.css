@@ -1,0 +1,136 @@
+.authPage {
+  display: flex;
+  min-height: 100vh;
+  background: #0d1117;
+  color: #f0f6fc;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Left side container with form */
+.container {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #161b22;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+/* Logo and heading */
+.container .header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container .header img {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+.container .header h3 {
+  font-size: 1.6rem;
+  color: #58a6ff;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputTag label {
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.inputTag div {
+  display: flex;
+  align-items: center;
+  background: #21262d;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 10px 12px;
+  gap: 10px;
+}
+
+.inputTag input,
+.inputTag select {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #f0f6fc;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+/* Icons */
+.inputTag svg {
+  color: #58a6ff;
+  font-size: 1.2rem;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background: #238636;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #2ea043;
+}
+
+/* Register link */
+form a {
+  text-align: center;
+  color: #58a6ff;
+  text-decoration: underline;
+  margin-top: 10px;
+  display: block;
+  font-size: 0.95rem;
+}
+
+/* Right side banner */
+.banner {
+  flex: 1;
+  background: #0d1117;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Custom select styles */
+.inputTag select {
+  background-color: #21262d;
+  color: #f0f6fc;
+  border: none;
+  outline: none;
+  appearance: none;
+  padding-right: 30px;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+/* Dropdown options */
+.inputTag select option {
+  background-color: #161b22;
+  color: #f0f6fc;
+}

@@ -1,0 +1,197 @@
+.jobs {
+  background-color: #0f172a;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: #f1f5f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jobs .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.jobs h1 {
+  font-size: 1.8rem;
+  color: #38bdf8;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* 🔍 Filters + Search Bar */
+.jobs .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.jobs .filters input,
+.jobs .filters select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+  outline: none;
+  min-width: 150px;
+  transition: border-color 0.3s ease;
+}
+
+.jobs .filters input::placeholder {
+  color: #94a3b8;
+}
+
+.jobs .filters input:focus,
+.jobs .filters select:focus {
+  border-color: #0ea5e9;
+}
+
+/* 🧾 Job Cards */
+.jobs .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.5rem;
+}
+
+.jobs .card {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(30, 41, 59, 0.5);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.jobs .card:hover {
+  transform: translateY(-5px);
+}
+
+.jobs .job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jobs .job-header p {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #facc15;
+}
+
+.jobs .card p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.jobs .card a {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  background-color: #0ea5e9;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.jobs .card a:hover {
+  background-color: #0284c7;
+}
+
+/* Bookmark icons */
+.bookmark-icon {
+  font-size: 1.3rem;
+  color: #facc15;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.bookmark-icon:hover {
+  transform: scale(1.2);
+}
+
+.bookmark-icon.saved {
+  color: #f87171;
+}
+
+/* 🔄 Pagination */
+.jobs .pagination {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.jobs .pagination button {
+  margin: 0 5px;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e293b;
+  color: #f1f5f9;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.jobs .pagination button:hover {
+  background-color: #334155;
+}
+
+.jobs .pagination .active {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+.clear-filters-btn {
+  background-color: #0ea5e9;       /* sky blue */
+  color: #f1f5f9;                  /* light slate text */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(14, 165, 233, 0.2);
+}
+
+.clear-filters-btn:hover {
+  background-color: #0284c7;       /* darker on hover */
+  transform: translateY(-1px);
+}
+
+.clear-filters-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .jobs h1 {
+    font-size: 1.5rem;
+  }
+
+  .jobs .card {
+    padding: 1rem;
+  }
+
+  .jobs .job-header p {
+    font-size: 1rem;
+  }
+
+  .jobs .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .jobs .filters input,
+  .jobs .filters select {
+    width: 100%;
+  }
+}
