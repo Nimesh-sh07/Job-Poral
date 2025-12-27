@@ -1,0 +1,64 @@
+.howitworks {
+  background-color: #0f172a;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+}
+
+.howitworks .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.howitworks h3 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #06b6d4;
+  margin-bottom: 40px;
+}
+
+.howitworks .banner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .howitworks .banner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.howitworks .card {
+  background-color: #1f2937;
+  padding: 30px 20px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.howitworks .card:hover {
+  transform: translateY(-5px);
+}
+
+.howitworks .card svg {
+  font-size: 36px;
+  color: #06b6d4;
+  margin-bottom: 16px;
+}
+
+.howitworks .card p:first-of-type {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.howitworks .card p:last-of-type {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.6;
+}

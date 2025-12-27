@@ -1,0 +1,47 @@
+footer {
+  background-color: #1e293b; /* matches card dark tone */
+  color: #f1f5f9; /* light slate for text */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  border-top: 1px solid #334155; /* subtle border */
+  box-shadow: 0 -2px 10px rgba(56, 189, 248, 0.15);
+}
+
+footer a {
+  color: #94a3b8; /* muted text */
+  margin-left: 15px;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+  color: #38bdf8; /* sky blue hover */
+  transform: scale(1.2);
+  text-shadow: 0 0 8px #38bdf8;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  footer a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Conditional display classes */
+.footerShow {
+  display: flex;
+}
+
+.footerHide {
+  display: none;
+}

@@ -1,0 +1,115 @@
+.job_post {
+  background-color: #0f172a;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  color: #f1f5f9;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.job_post .container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.1);
+}
+
+.job_post h3 {
+  font-size: 1.6rem;
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.job_post form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.job_post .wrapper {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.job_post input,
+.job_post select,
+.job_post textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.job_post input:focus,
+.job_post select:focus,
+.job_post textarea:focus {
+  border-color: #38bdf8;
+}
+
+.salary_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.salary_wrapper select {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.ranged_salary {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ranged_salary input {
+  flex: 1;
+}
+
+.job_post textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.job_post button[type="submit"] {
+  background-color: #0ea5e9;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.job_post button[type="submit"]:hover {
+  background-color: #0284c7;
+}
+
+@media (max-width: 600px) {
+  .job_post .container {
+    padding: 1.2rem;
+  }
+
+  .job_post h3 {
+    font-size: 1.4rem;
+  }
+
+  .job_post .wrapper {
+    flex-direction: column;
+  }
+
+  .ranged_salary {
+    flex-direction: column;
+  }
+}

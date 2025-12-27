@@ -1,0 +1,137 @@
+.jobDetail {
+  padding: 2rem 1rem;
+  background-color: #0f172a;
+  min-height: 100vh;
+  color: #f8fafc;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.jobDetail .container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #1e293b;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(30, 41, 59, 0.5);
+}
+
+.jobDetail h3 {
+  font-size: 1.6rem;
+  color: #38bdf8;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.jobDetail .banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.jobDetail .banner p {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.jobDetail .banner span {
+  font-weight: 500;
+  color: #facc15;
+}
+
+/* Employer Info */
+.employer-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid #334155;
+  padding-top: 1rem;
+}
+
+.employer-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.employer-info img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #38bdf8;
+}
+
+/* Action Buttons */
+.jobDetail .action-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.apply-btn,
+.save-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+}
+
+.apply-btn {
+  background-color: #22c55e;
+  color: #fff;
+}
+
+.apply-btn:hover {
+  background-color: #16a34a;
+}
+
+.save-btn.save {
+  background-color: #0ea5e9;
+  color: #fff;
+}
+
+.save-btn.save:hover {
+  background-color: #0284c7;
+}
+
+.save-btn.unsave {
+  background-color: #f87171;
+  color: #fff;
+}
+
+.save-btn.unsave:hover {
+  background-color: #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .jobDetail .container {
+    padding: 1.2rem;
+  }
+
+  .jobDetail h3 {
+    font-size: 1.4rem;
+  }
+
+  .apply-btn,
+  .save-btn {
+    flex: 1;
+    font-size: 0.9rem;
+    padding: 0.45rem 1rem;
+  }
+
+  .employer-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
