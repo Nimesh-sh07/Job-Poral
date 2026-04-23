@@ -1,124 +1,136 @@
 .authPage {
   display: flex;
   min-height: 100vh;
-  background: #0d1117;
-  color: #f0f6fc;
-  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  color: var(--text);
 }
 
 /* Left side container with form */
-.container {
+.authPage .container {
   flex: 1;
-  padding: 40px;
+  padding: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #161b22;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  background: transparent;
+  box-shadow: none;
 }
 
 /* Logo and heading */
-.container .header {
+.authPage .container .header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
-.container .header img {
+.authPage .container .header img {
   width: 180px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
-.container .header h3 {
-  font-size: 1.6rem;
-  color: #58a6ff;
+.authPage .container .header h3 {
+  font-size: 1.8rem;
+  color: var(--text);
+  font-weight: 700;
 }
 
 /* Form styles */
-form {
+.authPage form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow);
 }
 
-.inputTag label {
+.authPage .inputTag label {
   font-size: 0.9rem;
-  color: #c9d1d9;
+  color: var(--muted);
   margin-bottom: 6px;
   display: block;
+  font-weight: 600;
 }
 
-.inputTag div {
+.authPage .inputTag div {
   display: flex;
   align-items: center;
-  background: #21262d;
-  border: 1px solid #30363d;
-  border-radius: 8px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
   padding: 10px 12px;
-  gap: 10px;
+  gap: 8px;
 }
 
-.inputTag input,
-.inputTag select {
+.authPage .inputTag input,
+.authPage .inputTag select {
   flex: 1;
   padding: 10px;
   border: none;
   background: transparent;
-  color: #f0f6fc;
+  color: var(--text);
   font-size: 0.95rem;
   outline: none;
 }
 
 /* Icons */
-.inputTag svg {
-  color: #58a6ff;
+.authPage .inputTag svg {
+  color: var(--primary);
   font-size: 1.2rem;
 }
 
 /* Submit button */
-button[type="submit"] {
-  background: #238636;
-  color: #ffffff;
+.authPage button[type="submit"] {
+  background: var(--primary);
+  color: #fff;
   padding: 12px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-button[type="submit"]:hover {
-  background: #2ea043;
+.authPage button[type="submit"]:hover {
+  background: var(--primary-hover);
 }
 
 /* Register link */
-form a {
+.authPage form a {
   text-align: center;
-  color: #58a6ff;
-  text-decoration: underline;
+  color: var(--primary);
+  text-decoration: none;
   margin-top: 10px;
   display: block;
   font-size: 0.95rem;
+  font-weight: 500;
 }
 
 /* Right side banner */
-.banner {
+.authPage .banner {
   flex: 1;
-  background: #0d1117;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 24px;
 }
 
-.banner img {
-  width: 90%;
-  max-width: 500px;
+.authPage .banner img {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 16px;
 }
 
 /* Custom select styles */
-.inputTag select {
-  background-color: #21262d;
-  color: #f0f6fc;
+.authPage .inputTag select {
+  background-color: var(--surface-alt);
+  color: var(--text);
   border: none;
   outline: none;
   appearance: none;
@@ -130,7 +142,19 @@ form a {
 }
 
 /* Dropdown options */
-.inputTag select option {
-  background-color: #161b22;
-  color: #f0f6fc;
+.authPage .inputTag select option {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .authPage {
+    flex-direction: column;
+  }
+  .authPage .container {
+    padding: 24px 16px;
+  }
+  .authPage .banner {
+    display: none;
+  }
 }

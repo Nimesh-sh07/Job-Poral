@@ -166,7 +166,7 @@ export const postApplication = catchAsyncErrors(async (req, res, next) => {
 
         // Call parser if we appended a file
         if (parserForm.getLengthSync && parserForm.getLengthSync() > 0) {
-          const parserResponse = await axios.post("http://localhost:8000/upload-resume/", parserForm, {
+          const parserResponse = await axios.post(process.env.RESUME_PARSER_URL, parserForm, {
             headers: parserForm.getHeaders(),
             maxContentLength: Infinity,
             maxBodyLength: Infinity,
@@ -277,6 +277,9 @@ export const jobseekerDeleteApplication = catchAsyncErrors(async (req, res, next
   if (!application) {
     return next(new ErrorHandler("Application not found!", 404));
   }
+  if (application?.applicantID?.user?.toString() !== req.user._id.toString()) {
+    return next(new ErrorHandler("You are not authorized to delete this application.", 403));
+  }
   await application.deleteOne();
   res.status(200).json({
     success: true,
@@ -302,6 +305,9 @@ export const updateApplicationStatus = catchAsyncErrors(async (req, res, next) =
   if (!application) {
     console.log("❌ Application not found with ID:", id);
     return next(new ErrorHandler("Application not found", 404));
+  }
+  if (application?.employerID?.user?.toString() !== req.user._id.toString()) {
+    return next(new ErrorHandler("You are not authorized to update this application.", 403));
   }
 
   application.status = status;

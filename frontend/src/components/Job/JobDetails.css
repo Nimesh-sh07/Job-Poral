@@ -1,23 +1,23 @@
 .jobDetail {
   padding: 2rem 1rem;
-  background-color: #0f172a;
+  background-color: var(--bg);
   min-height: 100vh;
-  color: #f8fafc;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
 }
 
 .jobDetail .container {
   max-width: 700px;
   margin: 0 auto;
-  background-color: #1e293b;
-  border-radius: 12px;
+  background-color: var(--surface);
+  border-radius: var(--radius);
   padding: 2rem;
-  box-shadow: 0 0 12px rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .jobDetail h3 {
   font-size: 1.6rem;
-  color: #38bdf8;
+  color: var(--text);
   font-weight: 600;
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
@@ -39,7 +39,7 @@
 
 .jobDetail .banner span {
   font-weight: 500;
-  color: #facc15;
+  color: #1e293b;
 }
 
 /* Employer Info */
@@ -48,14 +48,14 @@
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
-  border-top: 1px solid #334155;
+  border-top: 1px solid var(--border);
   padding-top: 1rem;
 }
 
 .employer-info p {
   margin: 0;
   font-size: 0.95rem;
-  color: #cbd5e1;
+  color: var(--muted);
 }
 
 .employer-info img {
@@ -63,7 +63,7 @@
   height: 48px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #38bdf8;
+  border: 2px solid #dbeafe;
 }
 
 /* Action Buttons */
@@ -87,21 +87,22 @@
 }
 
 .apply-btn {
-  background-color: #22c55e;
+  background-color: var(--primary);
   color: #fff;
+  text-decoration: none;
 }
 
 .apply-btn:hover {
-  background-color: #16a34a;
+  background-color: var(--primary-hover);
 }
 
 .save-btn.save {
-  background-color: #0ea5e9;
+  background-color: #334155;
   color: #fff;
 }
 
 .save-btn.save:hover {
-  background-color: #0284c7;
+  background-color: #1f2937;
 }
 
 .save-btn.unsave {

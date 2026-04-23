@@ -63,7 +63,7 @@ const Application = () => {
       return;
     }
 
-    const usingExistingResume = user?.resume?.public_id && user?.resume?.url;
+    const usingExistingResume = !!user?.resume?.url;
 
     if (!resume && !usingExistingResume) {
       setFileError("Please upload your resume");
