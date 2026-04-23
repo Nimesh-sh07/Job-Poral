@@ -12,15 +12,13 @@ import cors from "cors";
 import { errorMiddleware } from "./middlewares/error.js";
 import cookieParser from "cookie-parser";
 import fileUpload from "express-fileupload";
+import { isAuthenticated } from "./middlewares/auth.js";
 
 const app = express();
 config({ path: "./config/config.env" });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-// ✅ Serve static files (PDF resumes)
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // ✅ CORS Configuration
 app.use(
@@ -34,6 +32,9 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Protect uploaded files so resumes are not publicly accessible without auth.
+app.use("/uploads", isAuthenticated, express.static(path.join(__dirname, "uploads")));
 
 // ✅ Enable file uploads
 app.use(

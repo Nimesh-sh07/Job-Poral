@@ -44,7 +44,7 @@ const Login = () => {
 
       // Redirect based on role
       if (data.user.role === "Employer") {
-        window.location.href = "/my-jobs";
+        window.location.href = "/job/me";
       } else {
         window.location.href = "/";
       }

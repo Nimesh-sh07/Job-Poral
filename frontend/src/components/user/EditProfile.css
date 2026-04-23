@@ -1,27 +1,27 @@
 .edit-profile {
-  background: #0f172a; /* dark background */
-  color: #f8fafc;
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .edit-profile .container {
-  background: #1e293b; /* darker card */
-  border-radius: 12px;
+  background: var(--surface);
+  border-radius: var(--radius);
   padding: 2rem;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 
 .edit-profile h2 {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: #38bdf8;
+  color: var(--text);
   font-size: 2rem;
 }
 
@@ -34,47 +34,47 @@
 .input-field label {
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #f1f5f9;
+  color: var(--muted);
 }
 
 .input-field input[type="text"],
 .input-field input[type="email"],
 .input-field input[type="tel"],
 .input-field input[type="file"] {
-  background: #334155;
-  border: none;
-  border-radius: 8px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
   padding: 0.75rem 1rem;
-  color: #f8fafc;
+  color: var(--text);
   font-size: 1rem;
   outline: none;
   transition: 0.3s ease;
 }
 
 .input-field input:focus {
-  border: 2px solid #38bdf8;
-  background: #1e293b;
+  border: 1px solid var(--primary);
+  background: var(--surface);
 }
 
-button[type="submit"] {
+.edit-profile button[type="submit"] {
   width: 100%;
-  background: #38bdf8;
+  background: var(--primary);
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 0.75rem;
-  color: #0f172a;
-  font-size: 1.1rem;
-  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: 0.3s ease;
   margin-top: 1rem;
 }
 
-button[disabled] {
+.edit-profile button[disabled] {
   background: #64748b;
   cursor: not-allowed;
 }
 
-button:hover:not([disabled]) {
-  background: #0ea5e9;
+.edit-profile button:hover:not([disabled]) {
+  background: var(--primary-hover);
 }

@@ -1,8 +1,8 @@
 .saved-jobs {
-  padding: 4rem 2rem;
-  background-color: #0f172a; /* Dark blue-gray */
+  padding: 2.5rem 1rem;
+  background-color: var(--bg);
   min-height: 100vh;
-  color: #f8fafc;
+  color: var(--text);
 }
 
 .saved-jobs .container {
@@ -11,10 +11,10 @@
 }
 
 .saved-jobs h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
   text-align: center;
-  color: #38bdf8; /* Sky Blue */
+  color: var(--text);
 }
 
 .saved-jobs .banner {
@@ -24,22 +24,22 @@
 }
 
 .saved-jobs .card {
-  background-color: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 12px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 1.5rem;
-  box-shadow: 0 0 12px rgba(56, 189, 248, 0.1);
+  box-shadow: var(--shadow);
   transition: transform 0.2s ease-in-out;
 }
 
 .saved-jobs .card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 
 .saved-jobs .card h3 {
   font-size: 1.4rem;
-  color: #facc15; /* Amber */
+  color: var(--text);
   margin-bottom: 0.5rem;
 }
 
@@ -52,16 +52,16 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #0ea5e9;
+  background-color: var(--primary);
   color: #fff;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-weight: bold;
   transition: background 0.3s;
 }
 
 .saved-jobs .card a:hover {
-  background-color: #0284c7;
+  background-color: var(--primary-hover);
 }
 
 .saved-jobs .card button {

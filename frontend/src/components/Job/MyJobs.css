@@ -1,9 +1,8 @@
 .myJobs {
-  background-color: #0f172a;
-  color: #f1f5f9;
+  background-color: var(--bg);
+  color: var(--text);
   min-height: 100vh;
-  padding: 2rem 1rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 2.5rem 1rem;
 }
 
 .myJobs .container {
@@ -12,9 +11,9 @@
 }
 
 .myJobs h1 {
-  font-size: 1.8rem;
-  color: #38bdf8;
-  margin-bottom: 2rem;
+  font-size: 1.9rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -25,10 +24,11 @@
 }
 
 .card {
-  background-color: #1e293b;
+  background-color: var(--surface);
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 12px rgba(30, 41, 59, 0.5);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -44,7 +44,7 @@
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: #facc15;
+  color: var(--text);
   margin-bottom: 0.3rem;
 }
 
@@ -52,18 +52,18 @@
 .short_fields select {
   width: 100%;
   padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #334155;
-  background-color: #0f172a;
-  color: #f1f5f9;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--surface-alt);
+  color: var(--text);
   font-size: 0.9rem;
   outline: none;
 }
 
 .short_fields select:disabled,
 .short_fields input:disabled {
-  background-color: #1e293b;
-  color: #cbd5e1;
+  background-color: #f8fafc;
+  color: var(--muted);
 }
 
 .long_field {
@@ -75,17 +75,17 @@
 .long_field textarea {
   width: 100%;
   padding: 0.7rem;
-  background-color: #0f172a;
-  border: 1px solid #334155;
-  border-radius: 6px;
-  color: #f1f5f9;
+  background-color: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
   resize: vertical;
   font-size: 0.95rem;
 }
 
 .long_field span {
   font-weight: 600;
-  color: #facc15;
+  color: var(--text);
   margin-bottom: 0.3rem;
   display: inline-block;
 }
@@ -116,19 +116,19 @@
 }
 
 .edit_btn {
-  background-color: #0ea5e9;
+  background-color: var(--primary);
   color: white;
 }
 .edit_btn:hover {
-  background-color: #0284c7;
+  background-color: var(--primary-hover);
 }
 
 .check_btn {
-  background-color: #22c55e;
+  background-color: var(--primary);
   color: white;
 }
 .check_btn:hover {
-  background-color: #16a34a;
+  background-color: var(--primary-hover);
 }
 
 .cross_btn {

@@ -1,23 +1,33 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-alt: #f1f5f9;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --danger: #dc2626;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
 }
-html, body {
-  overflow-x: hidden;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
 }

@@ -1,24 +1,25 @@
 .application {
-  padding: 4rem 1rem;
-  background-color: #0f172a; /* Dark background */
+  padding: 3rem 1rem;
+  background-color: var(--bg);
   min-height: 100vh;
-  color: #f1f5f9;
+  color: var(--text);
 }
 
 .application .container {
   max-width: 600px;
   margin: auto;
-  background: #1e293b;
+  background: var(--surface);
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .application h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #38bdf8;
+  margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
 .application form {
@@ -29,19 +30,19 @@
 
 .application form input,
 .application form textarea {
-  padding: 0.8rem 1rem;
-  border: none;
-  border-radius: 8px;
+  padding: 0.8rem 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
   font-size: 1rem;
-  background-color: #334155;
-  color: #f1f5f9;
+  background-color: var(--surface-alt);
+  color: var(--text);
   outline: none;
   transition: border 0.3s;
 }
 
 .application form input:focus,
 .application form textarea:focus {
-  border: 1px solid #38bdf8;
+  border: 1px solid var(--primary);
 }
 
 .application form textarea {
@@ -52,37 +53,37 @@
 .application form label {
   font-weight: 600;
   margin-bottom: 0.4rem;
-  color: #facc15;
+  color: var(--text);
 }
 
 .application form input[type="file"] {
   background: none;
-  border: 1px dashed #94a3b8;
+  border: 1px dashed #cbd5e1;
   padding: 0.5rem;
   cursor: pointer;
-  color: #cbd5e1;
+  color: var(--muted);
   transition: all 0.2s ease;
 }
 
 .application form input[type="file"]:hover {
-  border-color: #38bdf8;
-  background-color: #1e293b;
+  border-color: var(--primary);
+  background-color: var(--surface-alt);
 }
 
 .application form button {
-  background-color: #0ea5e9;
+  background-color: var(--primary);
   color: #fff;
   border: none;
   padding: 0.9rem;
-  border-radius: 8px;
-  font-size: 1.1rem;
-  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
   transition: background 0.3s;
   margin-top: 0.5rem;
 }
 
 .application form button:hover {
-  background-color: #0284c7;
+  background-color: var(--primary-hover);
 }
 
 .application .error-message {

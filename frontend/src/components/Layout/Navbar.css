@@ -1,11 +1,13 @@
 /* === Navbar === */
 .navbarShow {
-  background-color: #1e1e2f;
-  padding: 0.8rem 2rem;
-  color: white;
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 1.5rem;
+  color: var(--text);
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
 }
 
 .navbarHide {
@@ -22,7 +24,7 @@
 
 /* Logo */
 .logo img {
-  height: 80px;
+  height: 56px;
 }
 
 /* Menu */
@@ -44,13 +46,14 @@
 }
 
 .menu li a {
-  color: white;
+  color: var(--text);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.92rem;
 }
 
 .menu li a:hover {
-  color: #00bcd4;
+  color: var(--primary);
 }
 
 /* Right Side (Avatar + Dropdown) */
@@ -65,12 +68,12 @@
 }
 
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid #dbeafe;
 }
 
 .avatar-img {
@@ -83,10 +86,11 @@
   position: absolute;
   top: 50px;
   right: 0;
-  background: white;
-  color: #333;
-  border-radius: 6px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
   padding: 0.75rem;
   display: flex;
   flex-direction: column;
@@ -98,7 +102,7 @@
 .dropdown-menu a,
 .dropdown-menu button {
   text-decoration: none;
-  color: #333;
+  color: var(--text);
   background: none;
   border: none;
   cursor: pointer;
@@ -108,14 +112,14 @@
 
 .dropdown-menu a:hover,
 .dropdown-menu button:hover {
-  color: #0077ff;
+  color: var(--primary);
 }
 
 /* Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 1.5rem;
-  color: white;
+  color: var(--text);
   cursor: pointer;
 }
 
@@ -130,7 +134,8 @@
     display: none;
     flex-direction: column;
     gap: 1rem;
-    background-color: #1e1e2f;
+    background-color: var(--surface);
+    border-top: 1px solid var(--border);
     position: absolute;
     top: 70px;
     left: 0;

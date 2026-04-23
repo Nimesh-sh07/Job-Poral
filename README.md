@@ -1,4 +1,4 @@
-# 💼 Job Portal – Full Stack Application
+# Ai Job Portal App with MERN Stack
 
 A modern **Job Portal web application** that connects **job seekers** and **employers**, built using the **MERN stack** and enhanced with a **resume parsing & job-matching system** powered by **FastAPI**.
 
@@ -8,12 +8,12 @@ This project started from a basic structure and has been **significantly extende
 
 ## 🚀 Features
 
-### 👤 Job Seeker
-- User registration & login (JWT authentication)
-- Browse and search job listings
-- Upload resume (PDF/DOCX)
-- Resume-based job recommendations
-- View detailed job descriptions
+- **Frontend:** React.js, React Router, Vite
+- **Backend:** Node.js, Express.js, MongoDB
+- **Authentication:** JWT (JSON Web Tokens), Bcrypt (for password hash)
+- **File Upload:** Cloudinary (for profile images) + local storage support (for resumes)
+- **Resume Parsing Service:** FastAPI, spaCy, PyMuPDF, pytesseract
+- **Deployment:** Vercel (frontend), Render(backend), MongoDB Atlas (database)
 
 ### 🏢 Employer
 - Employer registration & login
@@ -36,19 +36,25 @@ This project started from a basic structure and has been **significantly extende
 - CSS / Tailwind-style utility classes
 - Axios
 
-### Backend
-- Node.js
-- Express.js
-- MongoDB & Mongoose
-- JWT Authentication
 
-### Resume Parser
-- FastAPI (Python)
-- PyMuPDF
-- OCR (Tesseract)
-- Basic NLP for skill extraction
+2. Install NPM packages:
 
----
+   ```sh
+   cd react-job-portal
+   cd backend
+   npm install
+   cd ..
+   cd frontend
+   npm install
+   ```
+
+3. Install resume parser dependencies (Python):
+
+   ```sh
+   cd ../resume-parser
+   pip install -r requirements.txt
+   ```
+
 
 ## 📁 Project Structure
 Job-Poral/
@@ -60,7 +66,18 @@ Job-Poral/
 └── .gitignore
 
 
----
+   ```env
+   PORT=
+   CLOUDINARY_API_KEY=
+   CLOUDINARY_API_SECRET=
+   CLOUDINARY_CLOUD_NAME=
+   FRONTEND_URL=
+   DB_URL=
+   JWT_SECRET_KEY=
+   JWT_EXPIRE=
+   COOKIE_EXPIRE=
+   RESUME_PARSER_URL=
+   ```
 
 ## 🧠 How It Works
 
@@ -73,38 +90,16 @@ Job-Poral/
 
 This makes the portal smarter than a traditional job board.
 
----
+6. Run the application frontend (make sure you are in `/frontend` directory) :
+   ```sh
+   npm run dev
+   ```
+7. Run the resume parser service (make sure you are in `/resume-parser` directory):
 
-## 🔐 Environment Variables
+   ```sh
+   uvicorn main:app --reload --port 8000
+   ```
 
-To run this project locally, you must create your **own `.env` file** inside the `backend/` folder.
+8. Open your browser and navigate to `http://localhost:5173` to view the app.
 
-> ⚠️ **Do NOT commit your real credentials to GitHub**
-
-### 📄 `backend/.env`
-
-```env
-PORT=4000
-
-# Cloudinary (for resume / file uploads)
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-
-# Frontend URL
-FRONTEND_URL=http://localhost:5173
-
-# MongoDB Database
-DB_URL=your_mongodb_connection_string
-
-# Authentication
-JWT_SECRET_KEY=your_jwt_secret_key
-JWT_EXPIRE=7d
-COOKIE_EXPIRE=7
-
-# Environment
-NODE_ENV=development
-
-# Resume Parser (FastAPI)
-RESUME_PARSER_URL=http://localhost:8000/upload-resume/
 

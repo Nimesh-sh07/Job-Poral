@@ -38,11 +38,11 @@ const Jobs = () => {
       case "salary_desc":
         return { sortBy: "fixedSalary", sortOrder: "desc" };
       case "date_new":
-        return { sortBy: "createdAt", sortOrder: "desc" };
+        return { sortBy: "jobPostedOn", sortOrder: "desc" };
       case "date_old":
-        return { sortBy: "createdAt", sortOrder: "asc" };
+        return { sortBy: "jobPostedOn", sortOrder: "asc" };
       default:
-        return { sortBy: "createdAt", sortOrder: "desc" };
+        return { sortBy: "jobPostedOn", sortOrder: "desc" };
     }
   };
 
