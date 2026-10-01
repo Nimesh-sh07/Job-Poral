@@ -1,105 +1,37 @@
-# Ai Job Portal App with MERN Stack
+# Job Portal (MERN + FastAPI resume matching)
 
-A modern **Job Portal web application** that connects **job seekers** and **employers**, built using the **MERN stack** and enhanced with a **resume parsing & job-matching system** powered by **FastAPI**.
+A job portal where **employers** post jobs with required skills and **job seekers** apply, bookmark jobs, and upload a resume. A separate **FastAPI service** extracts skills from the resume and the backend **ranks jobs by skill match**.
 
-This project started from a basic structure and has been **significantly extended and customized** with new features, improved backend logic, and resume-based job matching.
+**Live demo:** ADD-YOUR-VERCEL-URL
 
----
+## Features
+- JWT authentication (httpOnly cookie) with bcrypt password hashing and two roles: job seeker and employer
+- Employers: post jobs, define required skills, manage listings, view applications
+- Job seekers: browse jobs, apply, save jobs, upload a resume, see jobs ranked by match score
+- Resume parsing service: PDF/image text extraction (PyMuPDF, Tesseract OCR) plus skill extraction (spaCy and a keyword list)
 
-## 🚀 Features
+## Architecture
+React (Vite) -> Express API -> MongoDB Atlas, with Cloudinary for images and a FastAPI service for resume skill extraction.
+Deployed: frontend on Vercel, backend on Render, database on MongoDB Atlas.
 
-- **Frontend:** React.js, React Router, Vite
-- **Backend:** Node.js, Express.js, MongoDB
-- **Authentication:** JWT (JSON Web Tokens), Bcrypt (for password hash)
-- **File Upload:** Cloudinary (for profile images) + local storage support (for resumes)
-- **Resume Parsing Service:** FastAPI, spaCy, PyMuPDF, pytesseract
-- **Deployment:** Vercel (frontend), Render(backend), MongoDB Atlas (database)
+## Tech stack
+- Frontend: React, React Router, Axios, Vite
+- Backend: Node.js, Express, Mongoose, JWT, bcrypt
+- Resume parser: Python, FastAPI, spaCy, PyMuPDF, pytesseract
 
-### 🏢 Employer
-- Employer registration & login
-- Post new job openings
-- View and manage posted jobs
-- Define required skills for jobs
+## Run locally
+1. Backend: `cd backend`, copy `.env.example` to `.env` and fill in your own values, then `npm install` and `npm run dev`
+2. Resume parser (needs Python 3.10+ and the Tesseract binary): `cd resume-parser`, then `pip install -r requirements.txt`, `python -m spacy download en_core_web_sm`, `uvicorn main:app --reload --port 8000`
+3. Frontend: `cd frontend`, then `npm install` and `npm run dev` (opens at http://localhost:5173)
 
-### 📄 Resume Parser & Matching
-- FastAPI-based resume parsing service
-- Extracts skills from resumes
-- Matches resume skills with job required skills
-- Jobs are ranked based on skill relevance
+## How matching works
+1. The job seeker uploads a resume and the parser returns the extracted skills.
+2. Each job's required skills are compared with them.
+3. Score = matched skills / required skills (as a percentage), and jobs are sorted by score.
 
----
+## Known limitations and roadmap
+- Skill extraction is keyword and noun based, so it is approximate. Next step: a curated skills taxonomy.
+- Add automated tests and rate limiting on the auth routes.
 
-## 🛠️ Tech Stack
-
-### Frontend
-- React.js (Vite)
-- CSS / Tailwind-style utility classes
-- Axios
-
-
-2. Install NPM packages:
-
-   ```sh
-   cd react-job-portal
-   cd backend
-   npm install
-   cd ..
-   cd frontend
-   npm install
-   ```
-
-3. Install resume parser dependencies (Python):
-
-   ```sh
-   cd ../resume-parser
-   pip install -r requirements.txt
-   ```
-
-
-## 📁 Project Structure
-Job-Poral/
-│
-├── frontend/ # React frontend
-├── backend/ # Node.js + Express backend
-├── resume-parser/ # FastAPI resume parsing service
-├── README.md
-└── .gitignore
-
-
-   ```env
-   PORT=
-   CLOUDINARY_API_KEY=
-   CLOUDINARY_API_SECRET=
-   CLOUDINARY_CLOUD_NAME=
-   FRONTEND_URL=
-   DB_URL=
-   JWT_SECRET_KEY=
-   JWT_EXPIRE=
-   COOKIE_EXPIRE=
-   RESUME_PARSER_URL=
-   ```
-
-## 🧠 How It Works
-
-1. User registers or logs in
-2. Employer posts jobs with required skills
-3. Job seeker uploads resume
-4. Resume parser extracts skills
-5. Backend matches resume skills with job skills
-6. Relevant jobs are shown to the user
-
-This makes the portal smarter than a traditional job board.
-
-6. Run the application frontend (make sure you are in `/frontend` directory) :
-   ```sh
-   npm run dev
-   ```
-7. Run the resume parser service (make sure you are in `/resume-parser` directory):
-
-   ```sh
-   uvicorn main:app --reload --port 8000
-   ```
-
-8. Open your browser and navigate to `http://localhost:5173` to view the app.
-
-
+## Credits
+Started from a basic job-portal template, then extended with resume matching, backend logic, and deployment.

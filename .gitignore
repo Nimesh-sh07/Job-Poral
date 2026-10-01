@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+build/
+backend/uploads/
+__pycache__/
+*.pyc
+.venv/
+.idea/
+.vscode/
+.DS_Store
