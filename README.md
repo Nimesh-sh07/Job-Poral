@@ -2,7 +2,6 @@
 
 A job portal where **employers** post jobs with required skills and **job seekers** apply, bookmark jobs, and upload a resume. A separate **FastAPI service** extracts skills from the resume and the backend **ranks jobs by skill match**.
 
-**Live demo:** ADD-YOUR-VERCEL-URL
 
 ## Features
 - JWT authentication (httpOnly cookie) with bcrypt password hashing and two roles: job seeker and employer
@@ -11,8 +10,7 @@ A job portal where **employers** post jobs with required skills and **job seeker
 - Resume parsing service: PDF/image text extraction (PyMuPDF, Tesseract OCR) plus skill extraction (spaCy and a keyword list)
 
 ## Architecture
-React (Vite) -> Express API -> MongoDB Atlas, with Cloudinary for images and a FastAPI service for resume skill extraction.
-Deployed: frontend on Vercel, backend on Render, database on MongoDB Atlas.
+React (Vite) -> Express API -> MongoDB, with Cloudinary for images and a FastAPI service for resume skill extraction.
 
 ## Tech stack
 - Frontend: React, React Router, Axios, Vite
@@ -34,4 +32,4 @@ Deployed: frontend on Vercel, backend on Render, database on MongoDB Atlas.
 - Add automated tests and rate limiting on the auth routes.
 
 ## Credits
-Started from a basic job-portal template, then extended with resume matching, backend logic, and deployment.
+Started from a basic job-portal template, then extended with resume matching, and backend logic.
